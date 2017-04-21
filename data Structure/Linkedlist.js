@@ -9,8 +9,20 @@ function Node(value, next, prev) {
   this.prev = prev;
 }
 
-var LL = new LinkedList();
-var userList = new LinkedList();
-var toDoList = new LinkedList();
+LinkedList.prototype.addToHead = function(value) {
+  var newNode = new Node(value, this.head, null)
+    if(this.head) {
+      this.head.prev = newNode;
+    } else {
+      this.tail = newNode;
+    }
+    this.head = newNode
+}
 
-var node1 = new Node(5, node2, null)
+LinkedList.prototype.addToTail = function(value) {
+
+}
+
+
+
+var LL = new LinkedList();
